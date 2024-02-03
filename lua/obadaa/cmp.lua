@@ -109,7 +109,8 @@ cmp.setup {
       return vim_item
     end,
   },
-  sources = {
+  sources = { -- the order of elements inside actually matters and affect which will appear first
+    { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
@@ -124,11 +125,12 @@ cmp.setup {
   window = {
     completion = {
       border = {"╒","═","▼","|","╛","═","╘","|"},
-      winhighlight = "Normal:DiffAdd,FloatBorder:None,CursorLine:None,Search:None",
+      winhighlight = "Normal:DiffAdd,FloatBorder:None,CursorLine:Visual,Search:None",
       -- you can see :highlight command for the color group
     },
     documentation = {
       border = {"╒","═","╕","|","╛","═","╘","|"},
+      winhighlight = "Normal:DiffAdd,FloatBorder:None,CursorLine:Visual,Search:None",
     },
   },
   experimental = {

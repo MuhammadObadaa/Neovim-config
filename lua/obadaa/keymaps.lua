@@ -17,6 +17,7 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
+
 -- Normal --
 -- Entering visual_block_mode when using Neovim in Windows
 keymap("n","q","<C-v>",opts)
@@ -48,6 +49,11 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
+-- Close brackets when open it
+keymap("i","(","()<Left>",opts)
+keymap("i","<","<><Left>",opts)
+keymap("i","[","[]<Left>",opts)
+keymap("i","{","{}<Left>",opts)
 
 -- Visual --
 -- Stay in indent mode

@@ -1,4 +1,3 @@
-
 local fn = vim.fn
 
 -- Automatically install packer
@@ -43,9 +42,11 @@ packer.init {
 return packer.startup(function(use)
   -- My plugins here
 
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+  use {
+    "wbthomason/packer.nvim", -- Have packer manage itself
+    "nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
+    "nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
+  }
 
   use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end, }) -- markdown file preview 
 
@@ -55,15 +56,29 @@ return packer.startup(function(use)
   use 'projekt0n/github-nvim-theme'
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use {
+    "hrsh7th/nvim-cmp", -- The completion plugin
+    "hrsh7th/cmp-buffer", -- buffer completions
+    "hrsh7th/cmp-path", -- path completions
+    "hrsh7th/cmp-cmdline", -- cmdline completions
+    "saadparwaiz1/cmp_luasnip", -- snippet completions
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-nvim-lua",
+  }
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use {
+    "L3MON4D3/LuaSnip", --snippet engine
+    "rafamadriz/friendly-snippets", -- a bunch of snippets to use
+  }
+
+  -- LSP
+  use {
+    "neovim/nvim-lspconfig", -- enable LSP
+    "williamboman/mason.nvim", -- simple to use language server installer
+    "williamboman/mason-lspconfig.nvim", -- simple to use language server installer
+    'jose-elias-alvarez/null-ls.nvim', -- LSP diagnostics and code actions
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
