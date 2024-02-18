@@ -41,10 +41,11 @@ for _, server in pairs(servers) do
 
 	server = vim.split(server, "@")[1]
 
-	local require_ok, conf_opts = pcall(require, "obadaa.lsp.settings." .. server) -- TODO needs to be adjusted
+	local require_ok, conf_opts = pcall(require, "obadaa.lsp.settings." .. server)
 	if require_ok then
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
+    -- for details about lsp setting files .. watch youtube.com/watch?v=6F3ONwrCxMg 
 
 	lspconfig[server].setup(opts)
 end

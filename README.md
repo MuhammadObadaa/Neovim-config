@@ -13,6 +13,7 @@ All plugins are from the ```packer.nvim``` package manager. My configurations un
 * **Languages server protocol (LSP)**: with c,c++,php,html,json and powershell services with its cmp.
 You can add more languages by searching for your language key in [LSP servers](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers),
 Or check ```:Lsp*``` commands, then put this key in ```lua/obadaa/lsp/lsp-config.lua:servers```, and it will be automatically installed. 
+* **Settings for specific languages**: you can customize your LSP setting files for each language .. for more details you can watch [this video](youtube.com/watch?v=6F3ONwrCxMg)
 
 ## Requirments
 
