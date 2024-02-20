@@ -3,7 +3,7 @@ vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the s
 vim.opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files
-vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
+vim.opt.fileencoding = "utf-32"                  -- the encoding written to a file
 vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
 vim.opt.ignorecase = false                      -- ignore case in search patterns
 vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
@@ -35,7 +35,14 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 
 vim.opt.shortmess:append "c"
 
-vim.cmd "set shell=powershell"
+vim.opt.shell = 'powershell'
+--vim.opt.shellcmdflag = '-nologo -noprofile -ExecutePolicy RemoteSigned -command'
+vim.opt.shellcmdflag = '-nologo -noprofile -command'
+vim.opt.shellxquote = ''
+
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
+vim.cmd [[au CursorHold * :exec 'match Search /\V\<'.expand('<cword>').'\>/']]
+--auto highlight current word -- in vim you can use "gd" to do it
+--this makes :intro screen disappeard after the hold time and with '../' or './' text makes some mistakes

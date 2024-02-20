@@ -80,6 +80,14 @@ return packer.startup(function(use)
     'jose-elias-alvarez/null-ls.nvim', -- LSP diagnostics and code actions
   }
 
+  -- Telescope.nvim
+  use {
+    'nvim-telescope/telescope.nvim',
+    --tag = '0.1.5', --or branch = '0.1.x'
+    --require = {{'nvim-lua/plenary.nvim'}},
+    'nvim-telescope/telescope-media-files.nvim',
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
