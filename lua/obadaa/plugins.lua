@@ -46,6 +46,8 @@ return packer.startup(function(use)
     "wbthomason/packer.nvim", -- Have packer manage itself
     "nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
     "nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
+    "nvim-tree/nvim-web-devicons",
+    "nvim-tree/nvim-tree.lua", -- For nvim tree
   }
 
   use({ "iamcco/markdown-preview.nvim", run = function() vim.fn["mkdp#util#install"]() end, }) -- markdown file preview 

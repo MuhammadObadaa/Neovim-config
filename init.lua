@@ -5,3 +5,5 @@ require "obadaa.colorscheme"
 require "obadaa.cmp"
 require "obadaa.lsp"
 require "obadaa.telescope"
+require "obadaa.nvim-tree"
+

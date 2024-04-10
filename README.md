@@ -6,7 +6,7 @@ My own Neovim editor configuration repo.
 ## Main Configuration
 
 All plugins are from the ```packer.nvim``` package manager. My configurations until now are:
-* **Markdown files preview command**: with ```:Markdown*``` commands.
+* **Markdown files preview**: with ```:Markdown*``` commands. It requires node.js to be installed.
 * **Used Colorscheme**: github-dark colorscheme. for more details, you can see ```lua/obadaa/colorscheme.lua```.
 * **Vim configurations and keymaps**: configurations are in ```lua/obadaa/config.lua``` and keymaps are in ```lua/obadaa/keymaps.lua```.
 * **Auto completion**: with many customizable options in ```lua/obadaa/cmp.lua```.
@@ -16,6 +16,8 @@ Or check ```:Lsp*``` commands, then put this key in ```lua/obadaa/lsp/lsp-config
 * **Settings for specific languages**: you can customize your LSP setting files for each language .. for more details you can watch [this video](youtube.com/watch?v=6F3ONwrCxMg)
 * **Telescope**: for searching about files, texts, planets (as an easter egg), etc.. In a windows system there are some  dependencies, listed in Requirments. for more telescope configurations,
 you can check ```lua/obadaa/telescope.lua``` file. 
+* **Nvim-tree**: for more comfortable view of the directories structure. There are some errors with its config file ```lua/obadaa/nvim-tree.lua```, probably they are because of the operating system
+where the configuration is being set. 
 NOTE: (:Telescope plantes) command doesn't work correctly in windows system.
 
 ## Requirments
