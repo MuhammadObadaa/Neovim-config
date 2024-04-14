@@ -46,3 +46,8 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[au CursorHold * :exec 'match Search /\V\<'.expand('<cword>').'\>/']]
 --auto highlight current word -- in vim you can use "gd" to do it
 --this makes :intro screen disappeard after the hold time and with '../' or './' text makes some mistakes
+
+
+--auto save
+--vim.cmd [[autocmd TextChanged,TextChangedI <buffer> silent write]]
+vim.cmd [[autocmd TextChanged,TextChangedI * :write]]

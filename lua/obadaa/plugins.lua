@@ -89,6 +89,10 @@ return packer.startup(function(use)
     --require = {{'nvim-lua/plenary.nvim'}},
     'nvim-telescope/telescope-media-files.nvim',
   }
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'nvim-tree/nvim-web-devicons',},
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

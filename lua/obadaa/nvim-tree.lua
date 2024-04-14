@@ -47,11 +47,12 @@ nvim_tree.setup ({
     },
     git = {
         enable = true,
-        ignore = true,
+        ignore = false,
         timeout = 500,
     },
     view = {
         width = 30,
+        preserve_window_proportions = true, -- to disable equlize windows when you open nvim_tree
         --height = 30,
         --hide_root_folder = false,
         side = "left",
@@ -72,7 +73,7 @@ nvim_tree.setup ({
         --window_picker = { enable = true },
     },
     filters = {
-        dotfiles = true,
+        dotfiles = false,
     },
     renderer = {
         group_empty = true,

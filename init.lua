@@ -6,4 +6,4 @@ require "obadaa.cmp"
 require "obadaa.lsp"
 require "obadaa.telescope"
 require "obadaa.nvim-tree"
-
+require "obadaa.lualine"

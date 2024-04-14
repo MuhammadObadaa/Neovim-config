@@ -19,6 +19,9 @@ vim.g.maplocalleader = " "
 
 
 -- Normal --
+-- pasting from yank register always
+keymap("n","p",'"0p',opts)
+
 -- Entering visual_block_mode when using Neovim in Windows
 keymap("n","q","<C-v>",opts)
 
@@ -79,4 +82,4 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 --Nvimtree
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+--keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
