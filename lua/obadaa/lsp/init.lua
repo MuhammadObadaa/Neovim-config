@@ -5,4 +5,4 @@ end
 
 require("obadaa.lsp.lsp-config")
 require("obadaa.lsp.handlers").setup()
-require "obadaa.lsp.null-ls"
+require "obadaa.lsp.none-ls"
