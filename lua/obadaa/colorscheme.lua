@@ -1,7 +1,7 @@
 local colorscheme = "github_dark_default"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)  -- .. it's the concatination operation
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme) -- .. it's the concatination operation
 if not status_ok then
-  vim.notify("colorscheme " .. colorscheme .. " not found!")
-  return
+	vim.notify("colorscheme " .. colorscheme .. " not found!")
+	return
 end
