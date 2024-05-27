@@ -8,6 +8,7 @@ null_ls.setup({
     null_ls.builtins.formatting.stylua,
     null_ls.builtins.formatting.blade_formatter,
     null_ls.builtins.formatting.phpcbf,
+    null_ls.builtins.formatting.prettier,
   }
 })
 

@@ -19,6 +19,12 @@ vim.g.maplocalleader = " "
 
 
 -- Normal --
+-- autoSave toggle
+keymap("n","<leader>n",":ASToggle<CR>",opts)
+
+-- Terminal with split
+keymap("n","<leader>t",":split<CR>:terminal<CR>:resize -4<CR>",opts)
+
 -- pasting from yank register always
 keymap("n","p",'"0p',opts)
 

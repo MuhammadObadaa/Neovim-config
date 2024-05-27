@@ -37,7 +37,7 @@ vim.opt.shortmess:append("c")
 
 vim.opt.shell = "powershell"
 --vim.opt.shellcmdflag = '-nologo -noprofile -ExecutePolicy RemoteSigned -command'
-vim.opt.shellcmdflag = "-nologo -noprofile -command"
+vim.opt.shellcmdflag = "-nologo -command"
 vim.opt.shellxquote = ""
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
@@ -48,42 +48,6 @@ vim.cmd([[au CursorHold * :exec 'match Search /\V\<'.expand('<cword>').'\>/']])
 --this makes :intro screen disappeard after the hold time and with '../' or './' text makes some mistakes
 
 --Add custom commands
---command
-
---auto save -- has to be moved to a sparated file
---require "autoSave" this gives '= expected' error
-
---auto save
-local autosave = true
-
---vim.cmd [[autocmd TextChanged,TextChangedI <buffer> silent write]]
-
-function saveBuffer()
-	if vim.bo.filetype ~= "NvimTree" and vim.bo.filetype ~= "TelescopePrompt" then
-		vim.cmd("silent write")
-	end
-end
-
-function autoSaveToggle()
-	if autosave then
-		vim.cmd([[
-              augroup Autosave
-              autocmd TextChanged,TextChangedI * lua saveBuffer()
-              augroup END
-            ]])
-		print("AutoSave is On")
-	else
-		vim.cmd('autocmd! Autosave')
-		print("AutoSave is Off")
-	end
-	autosave = not autosave
-end
-
-vim.api.nvim_create_user_command("Autos", function()
-	autoSaveToggle()
-end, {})
-
-autoSaveToggle()
 
 -- close buffer without its window
 vim.api.nvim_create_user_command("Q", function()

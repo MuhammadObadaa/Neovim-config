@@ -5,6 +5,10 @@ local servers = {
   "powershell_es",
   "html",
   "jsonls",
+  "lwc_ls",
+  "eslint",
+  "biome",
+  "emmet_language_server",
 }
 
 local settings = {
