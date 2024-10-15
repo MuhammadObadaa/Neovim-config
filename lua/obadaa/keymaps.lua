@@ -54,11 +54,11 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 
--- Close brackets when open it
-keymap("i","(","()<Left>",opts)
-keymap("i","<","<><Left>",opts)
-keymap("i","[","[]<Left>",opts)
-keymap("i","{","{}<Left>",opts)
+-- Close brackets when open it -- Now there is an autoclose plugin
+--keymap("i","(","()<Left>",opts)
+--keymap("i","<","<><Left>",opts)
+--keymap("i","[","[]<Left>",opts)
+--keymap("i","{","{}<Left>",opts)
 
 -- Visual --
 -- Stay in indent mode

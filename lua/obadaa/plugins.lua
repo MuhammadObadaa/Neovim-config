@@ -59,6 +59,14 @@ return packer.startup(function(use)
 		end,
     })
 
+    -- autoclose
+    use({
+        "m4xshen/autoclose.nvim",
+        config = function()
+            require("autoclose").setup()
+        end,
+    })
+
 	use({ -- for javascript
 		"mfussenegger/nvim-lint",
 		config = function()
@@ -66,6 +74,7 @@ return packer.startup(function(use)
 		end,
 	})
 
+    --markdown-preview
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function()

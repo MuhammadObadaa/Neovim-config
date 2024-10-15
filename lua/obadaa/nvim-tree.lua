@@ -26,7 +26,7 @@ nvim_tree.setup ({
     --},
     open_on_tab = false,
     hijack_cursor = false,
-    update_cwd = true,
+    update_cwd = false,
     hijack_directories = {
         enable = true,
         auto_open = true,
@@ -42,13 +42,13 @@ nvim_tree.setup ({
     },
     update_focused_file = {
         enable = true,
-        update_cwd = true,
+        update_cwd = false,
         ignore_list = {},
     },
     git = {
         enable = true,
         ignore = false,
-        timeout = 500,
+        timeout = 1500,
     },
     view = {
         width = 30,
