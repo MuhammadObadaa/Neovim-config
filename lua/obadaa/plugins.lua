@@ -51,30 +51,30 @@ return packer.startup(function(use)
 		"nvim-tree/nvim-tree.lua", -- For nvim tree
 	})
 
-    -- git
-    use({
-        "lewis6991/gitsigns.nvim",
+	-- git
+	use({
+		"lewis6991/gitsigns.nvim",
 		config = function()
 			require("gitsigns").setup()
 		end,
-    })
+	})
 
-    -- autoclose
-    use({
-        "m4xshen/autoclose.nvim",
-        config = function()
-            require("autoclose").setup()
-        end,
-    })
+	-- autoclose
+	use({
+		"m4xshen/autoclose.nvim",
+		config = function()
+			require("autoclose").setup()
+		end,
+	})
 
 	use({ -- for javascript
 		"mfussenegger/nvim-lint",
 		config = function()
-			require "obadaa.lsp.lint"
+			require("obadaa.lsp.lint")
 		end,
 	})
 
-    --markdown-preview
+	--markdown-preview
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function()
@@ -138,6 +138,14 @@ return packer.startup(function(use)
 		"olrtg/nvim-emmet",
 		config = function()
 			vim.keymap.set({ "n", "v" }, "<leader>xe", require("nvim-emmet").wrap_with_abbreviation)
+		end,
+	})
+
+	use({
+		"goolord/alpha-nvim",
+		config = function()
+			--require'alpha'.setup(require'alpha.themes.dashboard'.config)
+			require("obadaa.alpha-nvim").config()
 		end,
 	})
 
