@@ -7,7 +7,7 @@ My own Neovim editor configuration repo.
 
 All plugins are from the ```packer.nvim``` package manager. My configurations until now are:
 * **Markdown files preview**: with ```:Markdown*``` commands. It requires node.js to be installed.
-* **Used Colorscheme**: github-dark colorscheme. for more details, you can see ```lua/obadaa/colorscheme.lua```.
+* **Used Colorscheme**: material-darker colorscheme. for more details, you can see ```lua/obadaa/colorscheme.lua```.
 * **Vim configurations and keymaps**: configurations are in ```lua/obadaa/config.lua``` and keymaps are in ```lua/obadaa/keymaps.lua```.
 * **Auto completion**: with many customizable options in ```lua/obadaa/cmp.lua```.
 * **Languages server protocol (LSP)**: with c,c++,php,html,json and powershell services with its cmp.
